@@ -1,0 +1,36 @@
+
+spring:
+  application:
+    name: lab3
+
+server:
+  port: 8080
+
+app:
+  owner: Turgan Dariga
+  group: IS-2401
+
+  mail:
+    from: no-reply@iitu.kz
+    retry-count: 3
+    timeout: 5s
+    enabled: true
+
+  upload:
+    max-file-size: 10MB
+    allowed-extensions:
+      - jpg
+      - png
+      - pdf
+
+logging:
+  level:
+    kz.iitu: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,env,configprops,conditions
+    access:
+      default: unrestricted
